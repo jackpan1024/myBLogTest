@@ -57,6 +57,12 @@
           dataType:'json',
           success:function(res){
             console.log(res)
+            if(res.status == 200){
+              alert(res.msg)
+              location.href = '/login'
+            }else{
+              alert(res.msg)
+            }
           }
         })
         e.preventDefault()
